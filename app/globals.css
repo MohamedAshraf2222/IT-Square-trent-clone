@@ -48,15 +48,7 @@ body {
 /* ==========================================================================
    2. Media & embedded content
    ========================================================================== */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+
 
 textarea {
   resize: vertical;
