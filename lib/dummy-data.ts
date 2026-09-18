@@ -1,11 +1,11 @@
-export type Category = {
-  id: string;
-  name: string;         
-  nameEn: string;       
-  slug: string;
-  image?: string;
-};
+import { Product, Slide ,Category} from "@/types/home/types";
 
+
+export const slides: Slide[] = [
+  { id: 1, image: "/images/hero-img-1.jpg", title: "عروض الأسبوع" },
+  { id: 2, image: "/images/hero-img-2.jpg", title: "وصل حديثاً" },
+  { id: 3, image: "/images/hero-img-3.jpg", title: "توصيل مجاني" },
+];
 
 export const categories: Category[] = [
   { id: "c1", name: "تاجير معدات",  nameEn: "Equipments rent",   slug: "rental",  image: "/images/category-rental.png" },
@@ -18,7 +18,6 @@ export const categories: Category[] = [
 ];
 
 
-import { Product } from "@/types/home/types";
 
 export const products: Product[] = [
   {

@@ -7,7 +7,19 @@ export type ProductCategory =
   | "electronics"
   | "other";
 
+export type Category = {
+  id: string;
+  name: string;         
+  nameEn: string;       
+  slug: string;
+  image?: string;
+};
 
+  export type Slide = {
+  id: number;
+  image: string;
+  title: string;
+};
 export interface Product {
   id: string;
   name: string;

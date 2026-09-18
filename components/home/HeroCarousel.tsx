@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -10,19 +9,10 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { ArrowUpRight } from "lucide-react";
+import { slides } from "@/lib/dummy-data";
 
-type Slide = {
-  id: number;
-  image: string;
-  title: string;
-};
 
-const slides: Slide[] = [
-  { id: 1, image: "/images/hero-img-1.jpg", title: "عروض الأسبوع" },
-  { id: 2, image: "/images/hero-img-2.jpg", title: "وصل حديثاً" },
-  { id: 3, image: "/images/hero-img-3.jpg", title: "توصيل مجاني" },
-];
+
 
 export default function HeroCarousel() {
   const [api, setApi] = React.useState<CarouselApi>();
