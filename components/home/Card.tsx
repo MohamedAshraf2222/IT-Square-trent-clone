@@ -37,7 +37,7 @@ const Card = ({ product }: CardProps) => {
           </button>
         </div>
 
-        <Link href={`/${product.slug}`} className="w-full">
+        <Link href={`/product/${product.id}`} className="w-full">
           <div className="bg-background rounded-b-2xl px-4 py-3.5 shadow-[0_8px_16px_#0000000a]">
             <div className="text-[12px] bg-[#0FA4A910] w-fit rounded-xl px-2.5 py-0.5 font-semibold text-[#0FA4A9] mb-3.5 leading-3.5">
               {product.category}

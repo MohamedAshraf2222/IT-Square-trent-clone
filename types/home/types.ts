@@ -26,8 +26,8 @@ export interface Product {
   nameEn?: string;
   slug: string;
   category: ProductCategory;
-  categoryName: string;     // ← Arabic
-  categoryNameEn: string;   // ← English
+  categoryName: string;     
+  categoryNameEn: string;   
   price: number;
   oldPrice?: number;
   discount?: number;

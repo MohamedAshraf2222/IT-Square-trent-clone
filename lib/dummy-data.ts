@@ -35,7 +35,7 @@ export const products: Product[] = [
     reviews: 132,
     location: "الرياض",
     image: "/images/products/p1.jpg",
-    images: ["/images/products/p1.jpg", "/images/products/p1-2.jpg"],
+    images: ["/images/products/p1.jpg", "/images/products/p2.jpg"],
     badge: "sale",
     inStock: true,
     description: "طقم كاسات كريستال فاخر من RCR الإيطالية، مثالي للمناسبات والحفلات.",
