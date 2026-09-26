@@ -1,14 +1,19 @@
 "use client";
+import { addToCart } from "@/store/cartSlice";
 import { Product } from "@/types/home/types";
 import { Heart, MapPin, Star, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
 interface CardProps {
   product: Product;
+  padding:string
 }
-const Card = ({ product }: CardProps) => {
+const Card = ({ product,padding }: CardProps) => {
+  const dispatch= useDispatch();
+
   return (
-    <section className="my-5 px-4 lg:px-8">
+    <section className={`my-5 ${padding}`}>
       <div className="group flex flex-col items-center max-w-75 justify-center mt-2.5 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.18)]">
         <div className="relative w-full h-75 overflow-hidden rounded-t-2xl">
           <Image
@@ -31,6 +36,10 @@ const Card = ({ product }: CardProps) => {
           <button
             type="button"
             className="absolute w-[80%] mx-auto rounded-2xl bottom-2.5 lg:-bottom-1 left-0 right-0 z-10 flex items-center justify-center gap-2 bg-[#1d9ba1] hover:bg-[#17878c] cursor-pointer text-white text-[13px] font-bold py-3 lg:translate-y-full lg:group-hover:-translate-y-3 transition-transform duration-300 ease-out"
+            onClick={(e)=>{e.preventDefault();
+dispatch(addToCart(product))
+
+            }}
           >
             <ShoppingCart className="w-4 h-4" />
             أضف إلى السلة

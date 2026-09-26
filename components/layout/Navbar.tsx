@@ -7,12 +7,12 @@ import {
   Search,
   MapPin,
   Heart,
-  ShoppingBasket,
   Menu as MenuIcon,
 } from "lucide-react";
 import NavbarBtn from "../ui/NavbarBtn";
 import MobileMenu from "./MobileMenu";
 import Switch from "../ui/Switch";
+import CartButton from "../cart/CartButton";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,6 +22,7 @@ const Navbar = () => {
       <header className="pt-2.5 pb-3 bg-background border-b border-[#e8e6e5d9] sticky top-0 z-40">
         <div className="mx-3 sm:mx-4.5">
           <div className="flex items-center justify-between w-full border border-nav-border rounded-[22px] gap-2 sm:gap-2.5 py-2 sm:py-2.5 px-2.5 sm:px-3.5 bg-gradient-to-br from-white to-[#fafcfc] shadow-[0_8px_16px_#0000000d]">
+            <Link href="/">
             <Image
               src="/images/logo.png"
               width={100}
@@ -29,7 +30,8 @@ const Navbar = () => {
               alt="Trent SA"
               className="w-16 sm:w-20 lg:w-25 h-auto"
               priority
-            />
+              />
+              </Link>
 
             <div className="hidden lg:flex flex-1 items-center justify-center rounded-3xl max-w-107 px-3 border border-border min-h-12.5 bg-background shadow-[0_8px_16px_#0000000a]">
               <Link
@@ -77,13 +79,8 @@ const Navbar = () => {
               url="/"
               icon={<Heart className="w-4 h-4 text-[#002f36]" />}
             />
+            <CartButton/>
 
-            <NavbarBtn
-              title="السلة"
-              iconBg="#e6f4f1"
-              url="/"
-              icon={<ShoppingBasket className="w-4 h-4 text-[#002f36]" />}
-            />
 
             <Link
               href="/"

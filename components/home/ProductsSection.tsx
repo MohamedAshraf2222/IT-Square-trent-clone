@@ -6,12 +6,14 @@ interface productSectionProps {
   header: string;
   allProductUrl: string;
   products: Product[];
+  padding:string
 }
 
 const ProductsSection = ({
   header,
   allProductUrl,
   products,
+  padding,
 }: productSectionProps) => {
   return (
     <section className="my-20 px-4 lg:px-8 flex flex-col items-center">
@@ -28,7 +30,7 @@ const ProductsSection = ({
         {products.length > 0 &&
           products
             .slice(0, 4)
-            .map((product) => <Card key={product.id} product={product} />)}
+            .map((product) => <Card key={product.id} product={product} padding={padding} />)}
       </div>
     </section>
   );
